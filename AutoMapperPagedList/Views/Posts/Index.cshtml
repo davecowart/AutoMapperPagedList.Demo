@@ -1,0 +1,47 @@
+@model IEnumerable<AutoMapperPagedList.Models.Post>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th></th>
+        <th>
+            Title
+        </th>
+        <th>
+            Body
+        </th>
+        <th>
+            Timestamp
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+        <td>
+			@item.Title
+        </td>
+        <td>
+			@item.Body
+        </td>
+        <td>
+			@String.Format("{0:g}", item.Timestamp)
+        </td>
+    </tr>
+}
+
+</table>
+
+
