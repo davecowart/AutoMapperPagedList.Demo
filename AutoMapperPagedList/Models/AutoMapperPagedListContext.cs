@@ -17,5 +17,6 @@ namespace AutoMapperPagedList.Models
         // 
         // System.Data.Entity.Database.SetInitializer(new System.Data.Entity.DropCreateDatabaseIfModelChanges<AutoMapperPagedList.Models.AutoMapperPagedListContext>());
 
-    }
+			public DbSet<AutoMapperPagedList.Models.Post> Posts { get; set; }
+		}
 }

@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using System.Data.Entity.Database;
+using AutoMapperPagedList.Models;
 
 namespace AutoMapperPagedList {
 	// Note: For instructions on enabling IIS6 or IIS7 classic mode, 
@@ -20,14 +22,15 @@ namespace AutoMapperPagedList {
 			routes.MapRoute(
 					"Default", // Route name
 					"{controller}/{action}/{id}", // URL with parameters
-					new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+					new { controller = "Posts", action = "Index", id = UrlParameter.Optional } // Parameter defaults
 			);
 
 		}
 
 		protected void Application_Start() {
 			AreaRegistration.RegisterAllAreas();
-
+			DbDatabase.SetInitializer<AutoMapperPagedListContext>(new DBInitializer());
+			AutoMapper.Mapper.CreateMap<Post, PostViewModel>();
 			RegisterGlobalFilters(GlobalFilters.Filters);
 			RegisterRoutes(RouteTable.Routes);
 		}

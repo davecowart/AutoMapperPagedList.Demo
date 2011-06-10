@@ -1,0 +1,11 @@
+C:\Projects\demo\AutoMapperPagedList\AutoMapperPagedList\bin\AutoMapperPagedList.dll
+C:\Projects\demo\AutoMapperPagedList\AutoMapperPagedList\bin\AutoMapperPagedList.pdb
+C:\Projects\demo\AutoMapperPagedList\AutoMapperPagedList\bin\AutoMapper.dll
+C:\Projects\demo\AutoMapperPagedList\AutoMapperPagedList\bin\EntityFramework.dll
+C:\Projects\demo\AutoMapperPagedList\AutoMapperPagedList\bin\System.Data.SqlServerCe.dll
+C:\Projects\demo\AutoMapperPagedList\AutoMapperPagedList\bin\System.Data.SqlServerCe.Entity.dll
+C:\Projects\demo\AutoMapperPagedList\AutoMapperPagedList\bin\WebActivator.dll
+C:\Projects\demo\AutoMapperPagedList\AutoMapperPagedList\bin\WebActivator.pdb
+C:\Projects\demo\AutoMapperPagedList\AutoMapperPagedList\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\demo\AutoMapperPagedList\AutoMapperPagedList\obj\Debug\AutoMapperPagedList.dll
+C:\Projects\demo\AutoMapperPagedList\AutoMapperPagedList\obj\Debug\AutoMapperPagedList.pdb

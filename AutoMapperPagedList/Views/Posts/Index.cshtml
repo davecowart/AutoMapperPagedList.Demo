@@ -1,4 +1,4 @@
-@model IEnumerable<AutoMapperPagedList.Models.Post>
+@model PagedList<AutoMapperPagedList.Models.PostViewModel>
 
 @{
     ViewBag.Title = "Index";
@@ -16,9 +16,6 @@
             Title
         </th>
         <th>
-            Body
-        </th>
-        <th>
             Timestamp
         </th>
     </tr>
@@ -34,13 +31,21 @@
 			@item.Title
         </td>
         <td>
-			@item.Body
-        </td>
-        <td>
 			@String.Format("{0:g}", item.Timestamp)
         </td>
     </tr>
 }
+
+@if (Model.IsPreviousPage) { 
+		@Html.ActionLink("Previous", "Index", new { page = Model.PageIndex - 1 })
+}
+
+@(Model.PageIndex + 1) of @(Model.TotalCount / Model.PageSize)
+
+@if (Model.IsNextPage) { 
+		@Html.ActionLink("Next", "Index", new { page = Model.PageIndex + 1 })
+}
+
 
 </table>
 
